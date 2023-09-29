@@ -1,12 +1,12 @@
-import {Greetings} from "./components/greetings/Greetings";
-import {Car} from "./components/car/Car";
-import "./global.css";
-export function App(){
-   return (
-    //   <div style = {{backgroundColor: "yellow"}}>
-      <div className="box">
-       <Car/>
-       <Greetings/>
-       </div>
-   );
+import { DisplayDifficulty } from "./components/DisplayDifficulty/DisplayDifficulty"
+import { MenuList } from "./components/MenuList/MenuList"
+import s from "./style.module.css"
+export function App() {
+    return <div>
+        <h1>Select the difficulty level:</h1>
+        <div className={s.container}>
+        <MenuList/>
+        <DisplayDifficulty difficulty="Low"/>
+        </div>
+    </div>;
 }
